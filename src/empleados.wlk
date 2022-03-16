@@ -1,7 +1,9 @@
 object galvan {
 	var sueldo = 15000
-	method sueldo() { return sueldo	}
-	method sueldo(nuevoValor) {	sueldo = nuevoValor	}
+	method getSueldo() { return sueldo	}
+	
+	method setSueldo(nuevoValor) {	sueldo = nuevoValor	}
+	
 }
 
 object baigorria {
@@ -12,16 +14,16 @@ object baigorria {
 		cantidadEmpanadasVendidas += cuantas
 	}
 
-	method sueldo() = cantidadEmpanadasVendidas * montoPorEmpanada
+	method getSueldo() = cantidadEmpanadasVendidas * montoPorEmpanada
 }
 
 object gimenez {
 	var dinero = 300000
 
-	method dinero() { return dinero	}
+	method getDinero() { return dinero	}
 
 	method pagarA(empleado) {
-		dinero -= empleado.sueldo()
+		dinero -= empleado.getSueldo()
 	}
 }
 
